@@ -8,14 +8,18 @@ $("#bots-link").click(function() {
     botsModal.iziModal("open");
 });
 
-var load = data => {
-        $("#lfm").text(" I'm currently listening to " + data.track + " by " + data.artist + ".");
-}
-
-/*
 function updateLfm() {
-    $.getScript("assets/js/last.fm.js");
+    $.ajax({
+        url: "https://lastfm.tetrafox.pw",
+        dataType: "json",
+        success: function(data) {
+            console.log(data.track);
+            $("#lfm").text(" I'm currently listening to " + data.track + " by " + data.artist + ".");
+        },
+        error: function() {
+            $("#lfm").remove();
+        }
+    });
 }
 updateLfm();
-setInterval(updateLfm, 60000);
-*/
+setInterval(updateLfm, 30000);
