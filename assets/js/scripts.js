@@ -13,7 +13,6 @@ function updateLfm() {
         url: "https://lastfm.tetrafox.pw",
         dataType: "json",
         success: function(data) {
-            console.log(data.track);
             $("#lfm").text(" I'm currently listening to " + data.track + " by " + data.artist + ".");
         },
         error: function() {
