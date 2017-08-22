@@ -5,7 +5,7 @@ body {
 	color: rgba(237, 238, 240, 1);
 	font-size: 1.5em;
 	padding: 0 2em 0 2em;
-	animation: crt-on 4s;
+	animation: glitch 4s;
 }
 a {
 	color: #edeef0;
@@ -252,7 +252,7 @@ footer {
   }
 
 /* https://codepen.io/lbebber/pen/XJRdrV */
-@keyframes crt-on {
+@keyframes glitch {
   0%{
 		overflow: hidden;
     transform: scale(1, 0.8) translate3d(0, 0, 0);
