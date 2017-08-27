@@ -116,6 +116,10 @@ section#links>ul {
 	list-style: square outside none;
 }
 
+#hackerman {
+  max-width: 100%;
+}
+
 /* classes */
 .animated {
 	animation-duration: 1s;
