@@ -1,18 +1,18 @@
 body {
 	margin: 0;
 	font-family: "Hack", monospace;
-	background: rgba(34, 34, 34, 1);
-	color: rgba(237, 238, 240, 1);
+	background: rgb(34, 34, 34);
+	color: rgb(237, 238, 240);
 	font-size: 1.5em;
 	padding: 0 2em 0 2em;
 	animation: glitch 4s;
 }
 a {
-	color: #edeef0;
+	color: rgb(237, 238, 240);
 }
 ::selection {
-	background: #edeef0;
-	color: rgba(34, 34, 34, 1);
+	background: rgb(237, 238, 240);
+	color: rgb(34, 34, 34);
 }
 #wrapper {
 	max-width: 1024px;
@@ -89,15 +89,16 @@ section#lol>.section-title {
     cursor: pointer;
 }
 
+/* modals */
+#bots-modal, #video-modal {
+  display: none;
+  background: rgb(34, 34, 34);
+  box-shadow: 0 12px 24px rgba(0,0,0,.5);
+}
+
 /* bots modal */
 #bots-modal {
-    display: none;
-    position: fixed;
-    margin: auto;
-    background: rgba(34, 34, 34, 1);
-    box-shadow: 0 12px 24px rgba(0,0,0,.5);
     padding: 1em 2em 2em 2em;
-    overflow: hidden;
 }
 .iziModal-content>table {
     margin: auto;
@@ -254,7 +255,6 @@ footer {
 /* https://codepen.io/lbebber/pen/XJRdrV */
 @keyframes glitch {
   0%{
-		overflow: hidden;
     transform: scale(1, 0.8) translate3d(0, 0, 0);
     filter: brightness(30);
     opacity: 1;
@@ -282,9 +282,7 @@ footer {
   }
   
   100%{
-    transform: scale(1, 1) translate3d(0, 0, 0);
     filter: contrast(1) brightness(1) saturate(1);
 		opacity: 1;
-		overflow: visible;
   }
 }
