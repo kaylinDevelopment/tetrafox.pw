@@ -1,27 +1,3 @@
-// bots modal
-var botsModal = $("#bots-modal").iziModal();
-
-$("#bots-link").click(function() {
-    botsModal.iziModal("open");
-});
-
-// lastfm
-function updateLfm() {
-    $.ajax({
-        url: "https://lastfm.tetrafox.pw",
-        dataType: "json",
-        success: function(data) {
-            $("#lfm").text(" I'm currently listening to " + data.track + " by " + data.artist + ".");
-        },
-        error: function() {
-            $("#lfm").remove();
-        }
-    });
-}
-
-updateLfm();
-setInterval(updateLfm, 30000);
-
 // videos
 var videosArray = 
 ["https://www.youtube.com/embed/G7n-WrYo3-U?autoplay=1",
@@ -70,7 +46,30 @@ var videosArray =
 "https://www.youtube.com/embed/U5sieCeLcmU?autoplay=1",
 "https://www.youtube.com/embed/98LoiMZ59Jw?autoplay=1",
 "https://www.youtube.com/embed/PToqVW4n86U?autoplay=1",
-"https://vine.co/v/e1z3Kh1DI5g/embed/simple?audio=1"];
+"https://www.youtube.com/embed/ZOdnqtdMilI?autoplay=1",
+"https://www.youtube.com/embed/Se4jBlvtA7M?autoplay=1",
+"https://www.youtube.com/embed/hijs2ZfVmkk?autoplay=1",
+"https://www.youtube.com/embed/rHsKqQMeeI4?autoplay=1",
+"https://www.youtube.com/embed/sIirbm9OTQg?autoplay=1",
+"https://www.youtube.com/embed/Y_sfqaDldjk?autoplay=1",
+"https://vine.co/v/e1z3Kh1DI5g/embed/simple?audio=1",
+"https://vine.co/v/OZQaEOdpHX3/embed/simple?audio=1",
+"https://vine.co/v/eIdOvPEIpO2/embed/simple?audio=1",
+"https://vine.co/v/MU1BQD3QHIg/embed/simple?audio=1",
+"https://vine.co/v/i5K0gKD6Ulv/embed/simple?audio=1",
+"https://vine.co/v/eUm1bYVvWj6/embed/simple?audio=1",
+"https://vine.co/v/hbpVueATxIi/embed/simple?audio=1",
+"https://vine.co/v/iduT1JXl2qt/embed/simple?audio=1",
+"https://vine.co/v/OE1YK9rwlwX/embed/simple?audio=1",
+"https://vine.co/v/MdKQTiPXOiw/embed/simple?audio=1",
+"https://vine.co/v/eqgpQ0U5Uph/embed/simple?audio=1",
+"https://vine.co/v/OE1HgjAKKZv/embed/simple?audio=1",
+"https://vine.co/v/M9wL1L6TXvx/embed/simple?audio=1",
+"https://vine.co/v/OdTAHZPrwxB/embed/simple?audio=1",
+"https://vine.co/v/OYtJtEVtETV/embed/simple?audio=1",
+"https://vine.co/v/OTXBmHuQwDr/embed/simple?audio=1",
+"https://vine.co/v/iZzI53jDJnx/embed/simple?audio=1",
+"https://vine.co/v/O5LmTLiE5ue/embed/simple?audio=1"];
 
 $("#pulse").click(function() {
     var videoModal = $("#video-modal").iziModal({
@@ -99,3 +98,27 @@ function getVideo() {
         getVideo();
     }
 }
+
+// lastfm
+function updateLfm() {
+    $.ajax({
+        url: "https://lastfm.tetrafox.pw",
+        dataType: "json",
+        success: function(data) {
+            $("#lfm").text(" I'm currently listening to " + data.track + " by " + data.artist + ".");
+        },
+        error: function() {
+            $("#lfm").remove();
+        }
+    });
+}
+
+updateLfm();
+setInterval(updateLfm, 30000);
+
+// bots modal
+var botsModal = $("#bots-modal").iziModal();
+
+$("#bots-link").click(function() {
+    botsModal.iziModal("open");
+});
