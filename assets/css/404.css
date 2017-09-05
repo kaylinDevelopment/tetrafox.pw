@@ -1,9 +1,12 @@
-html, body {
+html,
+body {
     height: 100%;
 }
+
 #Four-oh-four {
     font-size: 5em;
 }
+
 #wrapper {
     width: fit-content;
     height: 100%;
