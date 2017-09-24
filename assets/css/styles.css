@@ -33,18 +33,6 @@ body {
 
 span {
     display: inline-block;
-    animation-name: fadeInUp;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-timing-function: cubic-bezier(.5,-1, 0, 1.5);
-}
-
-a:not(#name) {
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    display: inline-block;
-    animation-timing-function: ease;
 }
 
 #container {
@@ -57,7 +45,6 @@ a:not(#name) {
 #name {
     color: #191919;
     position: relative;
-    display: inline-block;
 }
 
 #name:before {
@@ -82,7 +69,7 @@ a:not(#name) {
 }
 
 #divider {
-    padding-left: .5em;
+    height: 24px;
     border-left: 1px transparent solid;
     animation-name: addBorder;
     animation-duration: 1s;
@@ -94,6 +81,20 @@ a:not(#name) {
     display: inline-block;
 }
 
+.letter {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(.5,-1, 0, 1.5);
+}
+
+.link {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    display: inline-block;
+    animation-timing-function: ease;
+}
 
 /* icons */
 
@@ -111,6 +112,7 @@ a:not(#name) {
     font-size: .5em;
     color: #B2B2B2;
     transition: color .2s ease;
+    vertical-align: bottom;    
 }
 
 [class^="icon-"]:hover,
