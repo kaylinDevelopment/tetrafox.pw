@@ -28,20 +28,36 @@ body {
     font-family: "Futura PT";
     font-size: 3em;
     color: #191919;
+    word-break: break-all;
+}
+
+span {
+    display: inline-block;
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(.5,-1, 0, 1.5);
+}
+
+a:not(#name) {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    display: inline-block;
+    animation-timing-function: cubic-bezier(.5,-1, 0, 1);
 }
 
 #container {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    width: fit-content;
+    transform: translate(-50%, -50%);
 }
 
 #name {
     color: #191919;
-    text-decoration: none;
     position: relative;
+    display: inline-block;
 }
 
 #name:before {
@@ -62,19 +78,27 @@ body {
 }
 
 #tagline {
-    display: block;
     color: #B2B2B2;
 }
 
-a {
-    text-decoration: none;
+#divider {
+    padding-left: .5em;
+    border-left: 1px transparent solid;
+    animation-name: addBorder;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
 }
+
+.word {
+    display: inline-block;
+}
+
 
 /* icons */
 
 [class^="icon-"],
 [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
     font-family: "icomoon" !important;
     speak: none;
     font-style: normal;
@@ -82,10 +106,8 @@ a {
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-    /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    /* my shit */
     font-size: .5em;
     color: #B2B2B2;
     transition: color .2s ease;
@@ -109,7 +131,25 @@ a {
     content: "\ea96";
 }
 
-.divider {
-    border-left: 1px #B2B2B2 solid;
-    padding-left: .5em;
+
+/* animations */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes addBorder {
+    from {
+        border-left-color: transparent;
+    }
+    to {
+        border-left-color: #B2B2B2;
+    }
 }
