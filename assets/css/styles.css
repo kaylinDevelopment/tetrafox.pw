@@ -28,7 +28,7 @@ body {
     font-family: "Futura PT";
     font-size: 3em;
     word-break: break-all;
-    background-image: url("../img/texture.png"), linear-gradient(-45deg, #6BA9D9, #7879DF);
+    background: #7879DF;
 }
 
 span {
