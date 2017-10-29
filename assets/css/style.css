@@ -1,0 +1,136 @@
+::selection {
+    color: white;
+    background: white;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    font-family: "Avenir Next";
+    background: linear-gradient(-45deg, #6BA9D9, #7879DF);
+    font-weight: 200;
+    height: 100%;
+}
+
+#container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#name {
+    padding-right: 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 3em;
+    position: relative;
+    animation-timing-function: cubic-bezier(.5, -1, 0, 1.5);
+    display: inline-block;
+}
+
+#keybase:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0.2em;
+    background: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.2s cubic-bezier(.5, -1, 0, 1.5);
+}
+
+#keybase:hover:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+span {
+    display: inline-block;
+    animation-timing-function: cubic-bezier(.5, -1, 0, 1.5);
+}
+
+.divider {
+    position: relative;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.5);
+    height: 50px;
+}
+
+#bad {
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    padding: 1em;
+}
+
+/* icons */
+
+#links {
+    padding-left: 10px;
+}
+
+i {
+    color: white;
+    font-size: .5em;
+    opacity: 0.5;
+    padding: 5px;
+    transition: opacity .1s ease-in-out;
+}
+
+i:hover {
+    opacity: 1;
+}
+
+
+/* animations */
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes phase {
+
+    from {
+        background: #7879DF;
+    }
+    to {
+        background: #6BA9D9;
+    }
+}
