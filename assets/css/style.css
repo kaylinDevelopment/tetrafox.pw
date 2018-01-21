@@ -9,7 +9,7 @@
 }
 
 body {
-    background: #F8E71C;
+    background: /* url("../../assets/bg.png"), find a better pic */ #F8E71C;
     font-family: "Lobster", cursive;
     height: 100%;
 }
@@ -35,6 +35,13 @@ div.row:not(:last-of-type) {
     background: white;
     padding: 1em;
     box-shadow: 10px 10px rgba(0,0,0,1);
+    transform: scale(0);
+    animation: grow .8s ease forwards;
+}
+
+.grow-finished {
+    animation: none;
+    transform: scale(1);
 }
 
 .card-name:before {
@@ -75,4 +82,13 @@ footer {
     text-align: center;
     height: 100px;
     line-height: 100px;
+}
+
+@keyframes grow {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
 }
