@@ -1,136 +1,78 @@
 ::selection {
     color: white;
-    background: white;
+    background: black;
+    opacity: 1;
 }
 
 * {
     margin: 0;
 }
 
-html,
 body {
-    font-family: "Avenir Next";
-    background: linear-gradient(-45deg, #6BA9D9, #7879DF);
-    font-weight: 200;
+    background: #F8E71C;
+    font-family: "Lobster", cursive;
     height: 100%;
 }
 
 #container {
-    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.row {
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-#name {
-    padding-right: 15px;
+div.row:not(:last-of-type) {
+    margin-bottom: 2em;
 }
 
-a {
-    color: white;
-    text-decoration: none;
-    font-size: 3em;
-    position: relative;
-    animation-timing-function: cubic-bezier(.5, -1, 0, 1.5);
-    display: inline-block;
+.card {
+    font-size: 2em;
+    color: black;
+    background: white;
+    padding: 1em;
+    box-shadow: 10px 10px rgba(0,0,0,1);
 }
 
-#keybase:before {
+.card-name:before {
     content: "";
+    background-image: url("../../assets/tylord_small.png");
+    width: 50px;
+    height: 50px;
+    display: block;
+    background-size: 100% 100%;
+    position: absolute;
+    top: -50px;
+    left: 60px;
+}
+
+.card-link {
+    cursor: pointer;
+    transition: all .1s ease;
+}
+
+.card-link:hover {
+    background: #01AFD1;
+    color: white;
+}
+
+.card-link:active {
+    transform: translate(5px, 5px);
+    box-shadow: 5px 5px black;
+}
+
+span.card:not(:last-of-type), a.card-link:not(:last-of-type) {
+    margin-right: .5em;
+}
+
+footer {
     position: absolute;
     width: 100%;
-    height: 2px;
-    bottom: 0.2em;
-    background: white;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.2s cubic-bezier(.5, -1, 0, 1.5);
-}
-
-#keybase:hover:before {
-    visibility: visible;
-    transform: scaleX(1);
-}
-
-span {
-    display: inline-block;
-    animation-timing-function: cubic-bezier(.5, -1, 0, 1.5);
-}
-
-.divider {
-    position: relative;
-    width: 2px;
-    background: rgba(255, 255, 255, 0.5);
-    height: 50px;
-}
-
-#bad {
-    color: white;
-    font-size: 3em;
-    font-weight: bold;
-    padding: 1em;
-}
-
-/* icons */
-
-#links {
-    padding-left: 10px;
-}
-
-i {
-    color: white;
-    font-size: .5em;
-    opacity: 0.5;
-    padding: 5px;
-    transition: opacity .1s ease-in-out;
-}
-
-i:hover {
-    opacity: 1;
-}
-
-
-/* animations */
-
-.animated {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-}
-
-.fadeInUp {
-    animation-name: fadeInUp;
-}
-
-.fadeIn {
-    animation-name: fadeIn;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translate3d(0, 100%, 0);
-    }
-    to {
-        opacity: 1;
-        transform: none;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes phase {
-
-    from {
-        background: #7879DF;
-    }
-    to {
-        background: #6BA9D9;
-    }
+    bottom: 0;
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
 }

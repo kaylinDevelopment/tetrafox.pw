@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>???</title>
+    <meta property="og:title" content="tetra | 404">
+    <meta property="og:description" content="???">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tetrafox.pw">
+    <meta property="og:image" content="https://avatars1.githubusercontent.com/u/6416201">
+    <link rel="stylesheet" href="assets/fonts/avenir-next.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            animation: phase 5s infinite alternate linear;
+        }
+    </style>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@4.4.1/dist/typeit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/4.4.1/typeit.min.js"></script>
+    <script>
+        $.ajax({
+            url: "https://furryipsum.tetrafox.pw/",
+            success: function (res) {
+                $("#bad").typeIt({
+                        strings: [res],
+                        speed: 1
+                    })
+                    .tiPause(1000)
+                    .tiDelete(res.length)
+                    .tiPause(500)
+                    .tiSettings({
+                        speed: 100
+                    })
+                    .tiType("i mean")
+                    .tiPause(1000)
+                    .tiDelete(6)
+                    .tiPause(100)
+                    .tiType("404");
+            }
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <span id="bad"></span>
+    </div>
+</body>
+
+</html>
