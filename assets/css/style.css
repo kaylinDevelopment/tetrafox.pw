@@ -9,7 +9,7 @@
 }
 
 body {
-    background: /* url("../../assets/bg.png"), find a better pic */ #F8E71C;
+    background: url("/assets/img/bg.png"), #F8E71C;
     font-family: "Lobster", cursive;
     height: 100%;
 }
@@ -46,7 +46,7 @@ div.row:not(:last-of-type) {
 
 .card-name:before {
     content: "";
-    background-image: url("../../assets/tylord_small.png");
+    background-image: url("/assets/img/tylord_small.png");
     width: 50px;
     height: 50px;
     display: block;
