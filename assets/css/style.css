@@ -34,7 +34,7 @@ div.row:not(:last-of-type) {
     color: black;
     background: white;
     padding: 1em;
-    box-shadow: 10px 10px rgba(0,0,0,1);
+    box-shadow: 10px 10px rgba(0, 0, 0, 1);
     transform: scale(0);
     animation: grow .8s ease forwards;
 }
@@ -59,7 +59,8 @@ div.row:not(:last-of-type) {
     box-shadow: 5px 5px black;
 }
 
-span.card:not(:last-of-type), a.card-link:not(:last-of-type) {
+span.card:not(:last-of-type),
+a.card-link:not(:last-of-type) {
     margin-right: .5em;
 }
 
@@ -72,11 +73,28 @@ footer {
     line-height: 100px;
 }
 
+img {
+    z-index: -9999;
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    animation: 2s chibi ease-in-out infinite alternate;
+}
+
 @keyframes grow {
     from {
         transform: scale(0);
     }
     to {
         transform: scale(1);
+    }
+}
+
+@keyframes chibi {
+    from {
+        transform: scale(.8) translate(-50%, -50%);
+    }
+    to {
+        transform: scale(.8) translate(-50%, -52%);
     }
 }
