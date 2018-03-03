@@ -1,7 +1,6 @@
 ::selection {
-    color: white;
-    background: black;
-    opacity: 1;
+    background: #282D4E;
+    color: #F3F9FF;
 }
 
 * {
@@ -9,15 +8,14 @@
 }
 
 body {
-    background: url("/assets/img/bg.png"), #F8E71C;
+    background: url("/assets/img/bg.png"), #9DD1FC;
     font-family: "Lobster", cursive;
-    height: 100%;
 }
 
 #container {
+    left: 50%;
     position: absolute;
     top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
 }
 
@@ -30,18 +28,13 @@ div.row:not(:last-of-type) {
 }
 
 .card {
-    font-size: 2em;
-    color: black;
-    background: white;
-    padding: 1em;
-    box-shadow: 10px 10px rgba(0, 0, 0, 1);
-    transform: scale(0);
     animation: grow .8s ease forwards;
-}
-
-.grow-finished {
-    animation: none;
-    transform: scale(1);
+    background: #F3F9FF;
+    box-shadow: 10px 10px #282D4E;
+    color: #282D4E;
+    font-size: 2em;
+    padding: 1em;
+    transform: scale(0);
 }
 
 .card-link {
@@ -50,13 +43,13 @@ div.row:not(:last-of-type) {
 }
 
 .card-link:hover {
-    background: #01AFD1;
-    color: white;
+    background: #8198FA;
+    color: #F3F9FF;
 }
 
 .card-link:active {
+    box-shadow: 5px 5px #282D4E;
     transform: translate(5px, 5px);
-    box-shadow: 5px 5px black;
 }
 
 span.card:not(:last-of-type),
@@ -64,21 +57,28 @@ a.card-link:not(:last-of-type) {
     margin-right: .5em;
 }
 
-footer {
-    position: absolute;
-    width: 100%;
+#chibi {
     bottom: 0;
-    text-align: center;
-    height: 100px;
-    line-height: 100px;
+    height: 420px; /* haha that's the weed number */
+    left: 80%;
+    overflow: hidden;
+    position: absolute;
+    transform: translate(-50%);
+    z-index: -9999;
 }
 
-img {
-    z-index: -9999;
-    position: absolute;
-    top: 50%;
-    left: 80%;
+#chibi>a>img {
     animation: 2s chibi ease-in-out infinite alternate;
+}
+
+footer {
+    bottom: 0;
+    color: #282D4E;
+    font-size: 20px;
+    left: 50%;
+    margin-bottom: 50px;
+    position: absolute;
+    transform: translate(-50%);
 }
 
 @keyframes grow {
@@ -90,11 +90,16 @@ img {
     }
 }
 
+.grow-finished {
+    animation: none;
+    transform: scale(1);
+}
+
 @keyframes chibi {
     from {
-        transform: translate(-50%, -50%);
+        transform: translateY(3%);
     }
     to {
-        transform: translate(-50%, -52%);
+        transform: translateY(0%);
     }
 }

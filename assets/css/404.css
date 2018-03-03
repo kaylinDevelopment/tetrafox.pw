@@ -1,33 +1,31 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-
 * {
     margin: 0;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
     animation: whee 5s infinite;
+    font-family: "Roboto", sans-serif;
 }
 
 #bg {
     background: #FBE9EA;
+    height: 100%;
     position: absolute;
     width: 100%;
-    height: 100%;
-}
-
-h1 {
-    color: white;
-    font-size: 128pt;
-    -webkit-text-stroke: 2px #F3888F;
-    font-weight: 400;
 }
 
 #container {
+    left: 50%;
     position: absolute;
     top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
+}
+
+h1 {
+    -webkit-text-stroke: 2px #F3888F;
+    color: white;
+    font-size: 128pt;
+    font-weight: 400;
 }
 
 @keyframes whee {
