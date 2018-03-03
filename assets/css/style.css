@@ -62,7 +62,7 @@ a.card-link:not(:last-of-type) {
     height: 420px; /* haha that's the weed number */
     left: 80%;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     transform: translate(-50%);
     z-index: -9999;
 }
